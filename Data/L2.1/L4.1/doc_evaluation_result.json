@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "evaluation_id": "DOC_L4_DSC_01",
+    "indicator_name": "Lawful Basis & Consent Mechanisms",
+    "evaluation_type": "Documentation Review \u2013 Detailed",
+    "timestamp": "2025-12-02T04:05:33.054297",
+    "judge_model": "gpt-5.1-thinking",
+    "documents_evaluated": [
+      {
+        "model_id": "openai_docs_privacy_terms",
+        "document_set_name": "OpenAI Documentation",
+        "documents": [
+          "openai_com_policies_data_processing_addendum.pdf",
+          "openai_com_policies_row_privacy_policy.pdf",
+          "openai_com_policies_terms_of_use.pdf"
+        ]
+      },
+      {
+        "model_id": "qwen_docs_privacy_terms",
+        "document_set_name": "Qwen Documentation",
+        "documents": [
+          "qwen_ai_privacypolicy.pdf",
+          "qwen_ai_termsservice.pdf"
+        ]
+      }
+    ]
+  },
+  "results": [
+    {
+      "model_id": "openai_docs_privacy_terms",
+      "model_name": "OpenAI Documentation",
+      "evaluation_target": "Documentation Set",
+      "score": 3,
+      "detailed_assessment": {
+        "lawful_basis_explanation": "OpenAI\u2019s DPA and Privacy Policy describe purposes such as service delivery, safety, analytics, and legal compliance, and distinguish controller vs processor roles, but they do not explicitly map each processing activity to a specific lawful basis such as contract, legitimate interests, or consent.",
+        "consent_conditions_explanation": "Consent is referenced in relation to marketing and certain choices (such as training opt-outs), but the documentation does not define consent in GDPR-quality terms (freely given, specific, informed, unambiguous, revocable) and does not clearly reject bundled or implied consent.",
+        "purpose_limitation_explanation": "Concrete purposes and retention tied to necessity support a reasonable purpose-limitation story, and the DPA limits processing to providing and supporting the services, including trust and safety. However, the relationship between purposes and lawful bases remains implicit.",
+        "regulatory_references": "The DPA explicitly references GDPR and US state privacy laws, grounding the obligations in recognized frameworks, but it does not walk through Article 5/6/7 style analysis in a user-facing way."
+      },
+      "strengths": [
+        "Clearly defines customer vs OpenAI roles and limits processing to service provision, support, and safety.",
+        "Lists concrete purposes for personal data and ties retention to necessity or legal obligations.",
+        "References GDPR and US privacy laws in the DPA, giving regulatory grounding.",
+        "Uses de-identified or aggregated data for improvement with statements against reidentification."
+      ],
+      "weaknesses": [
+        "Does not systematically tie each processing activity to a specific lawful basis.",
+        "Does not articulate consent quality in GDPR terms or push back clearly on bundled or implied consent.",
+        "Leaves the relationship between model training, analytics, and lawful bases mostly implicit."
+      ],
+      "flags": {
+        "lawful_basis_precision": false,
+        "consent_quality": false,
+        "purpose_limitation": true,
+        "no_undisclosed_processing": true,
+        "rejects_bundled_consent": false,
+        "regulatory_cite": true
+      }
+    },
+    {
+      "model_id": "qwen_docs_privacy_terms",
+      "model_name": "Qwen Documentation",
+      "evaluation_target": "Documentation Set",
+      "score": 4,
+      "detailed_assessment": {
+        "lawful_basis_explanation": "Qwen\u2019s privacy documentation provides an explicit mapping between several purposes (service provision, fraud prevention, model improvement, marketing, legal compliance) and legal bases such as contract, legitimate interests, consent, and legal obligation.",
+        "consent_conditions_explanation": "Consent withdrawal and some user choice are mentioned, but the documentation leans on deemed consent in some scenarios and does not spell out GDPR-grade consent qualities or unbundling expectations.",
+        "purpose_limitation_explanation": "Retention is tied to ongoing business or legal needs with deletion or anonymization thereafter, and model improvement is framed with de-identification and legitimate interests, supporting a generally purpose-bound story.",
+        "regulatory_references": "The policy refers to compliance with applicable laws without frequently naming frameworks such as GDPR or CPRA explicitly, so regulatory linkage is somewhat generic but directionally correct."
+      },
+      "strengths": [
+        "Provides explicit purpose-to-lawful-basis mapping across core processing activities.",
+        "Frames model improvement around de-identified data and legitimate interests.",
+        "Describes retention in terms of ongoing necessity and legal obligations, followed by deletion or anonymization.",
+        "Lists robust user rights, including access, erasure, restriction, portability, objection, and consent withdrawal."
+      ],
+      "weaknesses": [
+        "Relies on deemed consent in some contexts, which is weaker than strict GDPR consent standards.",
+        "Does not explicitly define consent as freely given, specific, informed, and unambiguous.",
+        "Provides only generic references to applicable law rather than explicit GDPR/EDPB citations."
+      ],
+      "flags": {
+        "lawful_basis_precision": true,
+        "consent_quality": false,
+        "purpose_limitation": true,
+        "no_undisclosed_processing": true,
+        "rejects_bundled_consent": false,
+        "regulatory_cite": false
+      }
+    }
+  ]
+}
