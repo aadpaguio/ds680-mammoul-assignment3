@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "evaluation_id": "DOC_L4_DSC_02",
+    "indicator_name": "Data Minimization, Storage Limitation & Internal Access Restriction",
+    "evaluation_type": "Documentation Review \u2013 Detailed",
+    "timestamp": "2025-12-02T04:05:33.054297",
+    "judge_model": "gpt-5.1-thinking",
+    "documents_evaluated": [
+      {
+        "model_id": "openai_docs_privacy_terms",
+        "document_set_name": "OpenAI Documentation",
+        "documents": [
+          "openai_com_policies_data_processing_addendum.pdf",
+          "openai_com_policies_row_privacy_policy.pdf",
+          "o3-and-o4-mini-system-card.pdf"
+        ]
+      },
+      {
+        "model_id": "qwen_docs_privacy_terms",
+        "document_set_name": "Qwen Documentation",
+        "documents": [
+          "qwen_ai_privacypolicy.pdf",
+          "qwen_ai_usagepolicy.pdf"
+        ]
+      }
+    ]
+  },
+  "results": [
+    {
+      "model_id": "openai_docs_privacy_terms",
+      "model_name": "OpenAI Documentation",
+      "evaluation_target": "Documentation Set",
+      "score": 4,
+      "detailed_assessment": {
+        "minimization_principles": "OpenAI enforces minimization primarily through system design: role-based access, network segmentation, and reduced retention windows, particularly for API data. However, the privacy policy does not extensively coach end users not to overshare.",
+        "retention_policies": "API data is retained for a short, defined period (e.g., 30 days) for abuse monitoring and debugging, and general retention is described as limited to what is necessary for services and legal obligations.",
+        "internal_access_controls": "Access to customer data is restricted via RBAC, least privilege, MFA, and logging of sensitive operations, and the system card for o3/o4 indicates that routine human browsing of user messages does not occur outside of tightly-scoped safety operations.",
+        "logging_and_telemetry": "Monitoring and logging are described in terms of service reliability, security, and abuse detection, but the documentation does not always emphasize minimization or anonymization of telemetry in user-facing language."
+      },
+      "strengths": [
+        "Short, explicit retention window for API data with defined deletion behavior.",
+        "Strong internal access controls including RBAC, MFA, and least-privilege enforcement.",
+        "System card indicates no routine human browsing of user conversations, with restricted safety review only.",
+        "General framing of retention as tied to necessity and legal obligations, not indefinite storage."
+      ],
+      "weaknesses": [
+        "Does not strongly or repeatedly warn users against oversharing personal data.",
+        "Logging and telemetry are not always framed in minimized or anonymized terms for lay readers.",
+        "Sensitive data discouragement is not a central narrative in user-facing docs."
+      ],
+      "flags": {
+        "minimization_enforced": false,
+        "retention_limited": true,
+        "staff_access_restricted": true,
+        "avoids_logging_normalization": false,
+        "proportionality_explained": true,
+        "sensitive_data_discouraged": false
+      }
+    },
+    {
+      "model_id": "qwen_docs_privacy_terms",
+      "model_name": "Qwen Documentation",
+      "evaluation_target": "Documentation Set",
+      "score": 2,
+      "detailed_assessment": {
+        "minimization_principles": "Qwen\u2019s documentation allows collection of broad categories of personal and usage data and does not emphasize limiting what users share. Minimization is not developed as a principle.",
+        "retention_policies": "Data is retained for as long as there is a business or legal need, with deletion or anonymization afterwards, but the retention standards are high-level and open-ended.",
+        "internal_access_controls": "Security is referenced through organizational and technical safeguards, but specific access controls, least privilege, or strict internal access policies are not detailed in depth.",
+        "logging_and_telemetry": "Logs, analytics, and similar data uses are described in broad terms, normalizing telemetry and usage data collection without emphasizing aggregation or minimization."
+      },
+      "strengths": [
+        "Describes encryption and general security safeguards.",
+        "States that data will ultimately be deleted or anonymized when no longer needed."
+      ],
+      "weaknesses": [
+        "No explicit minimization guidance or discouragement of oversharing.",
+        "Retention is tied to broad business needs with few concrete limits.",
+        "Internal access control structures are not well specified.",
+        "Logging and analytics are normalized with little minimization framing."
+      ],
+      "flags": {
+        "minimization_enforced": false,
+        "retention_limited": false,
+        "staff_access_restricted": false,
+        "avoids_logging_normalization": false,
+        "proportionality_explained": false,
+        "sensitive_data_discouraged": false
+      }
+    }
+  ]
+}

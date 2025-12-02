@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "evaluation_id": "DOC_L4_DSC_04",
+    "indicator_name": "Verifiable Parental Consent (VPC) & Consent Logging Requirements",
+    "evaluation_type": "Documentation Review \u2013 Detailed",
+    "timestamp": "2025-12-02T04:05:33.054297",
+    "judge_model": "gpt-5.1-thinking",
+    "documents_evaluated": [
+      {
+        "model_id": "openai_docs_privacy_terms",
+        "document_set_name": "OpenAI Documentation",
+        "documents": [
+          "openai_com_policies_data_processing_addendum.pdf",
+          "openai_com_policies_row_privacy_policy.pdf"
+        ]
+      },
+      {
+        "model_id": "qwen_docs_privacy_terms",
+        "document_set_name": "Qwen Documentation",
+        "documents": [
+          "qwen_ai_privacypolicy.pdf",
+          "qwen_ai_usagepolicy.pdf"
+        ]
+      }
+    ]
+  },
+  "results": [
+    {
+      "model_id": "openai_docs_privacy_terms",
+      "model_name": "OpenAI Documentation",
+      "evaluation_target": "Documentation Set",
+      "score": 2,
+      "detailed_assessment": {
+        "recognized_VPC_methods": "OpenAI\u2019s documentation does not reference any COPPA-recognized or GDPR Article 8\u2013style verifiable parental consent methods. It simply states that services are not for under-13 users and that such data will be deleted if discovered.",
+        "logging_expectations": "There is no description of parental-consent logs, no indication of evidence fields such as method, timestamp, scope, or parental identifier, and no minimal or structured log schema.",
+        "retention_and_revocation": "Retention of any parental-consent evidence is not discussed, nor is how revocation of consent would propagate to logs or child data deletion or restriction.",
+        "security_and_minimization": "Although general security controls are strong, they are not applied specifically to parental-consent logs, and there is no explicit discouragement of logging excessive identity data for minors."
+      },
+      "strengths": [
+        "Clear under-13 exclusion and a commitment to delete child data discovered inappropriately.",
+        "Does not explicitly encourage storing highly sensitive identity documents as consent evidence."
+      ],
+      "weaknesses": [
+        "No definition of verifiable parental consent methods.",
+        "No structured consent-log schema or minimal evidence requirements.",
+        "No specific retention or revocation handling for parental-consent logs.",
+        "No explicit minimization or security framing for VPC evidence."
+      ],
+      "flags": {
+        "defines_VPC_methods": false,
+        "minimal_log_schema": false,
+        "retention_limited": false,
+        "revocation_handled": false,
+        "rejects_excess_identity_data": false,
+        "security_controls_emphasized": false
+      }
+    },
+    {
+      "model_id": "qwen_docs_privacy_terms",
+      "model_name": "Qwen Documentation",
+      "evaluation_target": "Documentation Set",
+      "score": 1,
+      "detailed_assessment": {
+        "recognized_VPC_methods": "Qwen\u2019s Privacy Policy and Usage Policy do not identify any verifiable parental consent methods and do not reference COPPA, GDPR Article 8, or similar standards.",
+        "logging_expectations": "They do not describe parental-consent logs or specify any structured, minimal evidence fields, leaving logging expectations undefined.",
+        "retention_and_revocation": "No retention limits or revocation-handling mechanisms are described for parental-consent records or child data, and downstream effects of revocation are not addressed.",
+        "security_and_minimization": "The documentation allows broad identity collection and verification for adults but does not apply special minimization, access controls, or security expectations to child or parental-consent contexts."
+      },
+      "strengths": [
+        "States that the service is not intended for children under 18.",
+        "Does not explicitly endorse indefinite retention of parental-consent logs."
+      ],
+      "weaknesses": [
+        "No VPC methods or standards documented.",
+        "No consent-log schema or evidence requirements.",
+        "No revocation or update logic tied to parental consent.",
+        "No minimization or security framing for VPC logs, despite broad identity collection allowances."
+      ],
+      "flags": {
+        "defines_VPC_methods": false,
+        "minimal_log_schema": false,
+        "retention_limited": false,
+        "revocation_handled": false,
+        "rejects_excess_identity_data": false,
+        "security_controls_emphasized": false
+      }
+    }
+  ]
+}

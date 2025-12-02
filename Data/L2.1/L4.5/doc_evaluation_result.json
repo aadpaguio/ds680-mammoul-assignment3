@@ -1,0 +1,88 @@
+{
+  "metadata": {
+    "evaluation_id": "DOC_L4_DSC_05",
+    "indicator_name": "Monitoring as System-Level Oversight (Not User Surveillance)",
+    "evaluation_type": "Documentation Review \u2013 Detailed",
+    "timestamp": "2025-12-02T04:05:33.054297",
+    "judge_model": "gpt-5.1-thinking",
+    "documents_evaluated": [
+      {
+        "model_id": "openai_docs_privacy_terms",
+        "document_set_name": "OpenAI Documentation",
+        "documents": [
+          "o3-and-o4-mini-system-card.pdf",
+          "openai_com_policies_data_processing_addendum.pdf"
+        ]
+      },
+      {
+        "model_id": "qwen_docs_privacy_terms",
+        "document_set_name": "Qwen Documentation",
+        "documents": [
+          "qwen_ai_usagepolicy.pdf",
+          "qwen3_technical_report.pdf"
+        ]
+      }
+    ]
+  },
+  "results": [
+    {
+      "model_id": "openai_docs_privacy_terms",
+      "model_name": "OpenAI Documentation",
+      "evaluation_target": "Documentation Set",
+      "score": 4,
+      "detailed_assessment": {
+        "monitoring_scope_and_focus": "OpenAI describes monitoring in terms of system reliability, safety, and abuse detection, framing it as oversight of model and platform behavior rather than continuous surveillance of individual users.",
+        "data_used_for_monitoring": "The documentation refers to logs, safety signals, security telemetry, and aggregated usage, and the system card emphasizes limited retention and lack of routine human review of user content.",
+        "incident_and_risk_workflows": "Security and safety programs, audits, and incident response are described, including escalation, mitigation, and continuous improvement processes aligned with risk management.",
+        "governance_and_documentation_links": "The DPA and security documentation align monitoring with formal controls, audits, and governance structures similar to those in frameworks like NIST AI RMF and GDPR-style accountability, though not always named explicitly."
+      },
+      "strengths": [
+        "Monitoring is mostly framed as system and infrastructure oversight, not user surveillance.",
+        "Use of logs and telemetry is tied to safety, reliability, and abuse detection rather than profiling users.",
+        "Describes audits, incident response, and continuous improvement within a governance structure.",
+        "Indicates no routine human browsing of conversations, with narrow safety exceptions."
+      ],
+      "weaknesses": [
+        "Does not always explicitly emphasize anonymization or aggregation in user-facing language.",
+        "Does not clearly reject user-level surveillance in all contexts, leaving some ambiguity."
+      ],
+      "flags": {
+        "system_level_monitoring": true,
+        "anonymized_or_aggregated": true,
+        "no_user_surveillance": false,
+        "incident_escalation": true,
+        "governance_linked": true,
+        "documentation_updates": true
+      }
+    },
+    {
+      "model_id": "qwen_docs_privacy_terms",
+      "model_name": "Qwen Documentation",
+      "evaluation_target": "Documentation Set",
+      "score": 3,
+      "detailed_assessment": {
+        "monitoring_scope_and_focus": "Qwen\u2019s usage policy and technical report describe moderation, safety, and logging in terms of enforcing rules and improving models, but they do not clearly distinguish system-level monitoring from potential user-level inspection.",
+        "data_used_for_monitoring": "References are made to logging and analysis of content to detect abuse or policy violations, without clear statements about anonymization or aggregation for monitoring purposes.",
+        "incident_and_risk_workflows": "There are general references to taking action when violations are detected, but little detail on structured incident escalation, mitigation workflows, or post-incident review.",
+        "governance_and_documentation_links": "Governance, audits, or links to formal risk instruments (such as DPIAs or AI Act-style documentation) are not well articulated in the monitoring discussion."
+      },
+      "strengths": [
+        "Monitoring is tied to safety and policy enforcement rather than presented as arbitrary surveillance.",
+        "Describes using logs and analysis to detect violations and improve models."
+      ],
+      "weaknesses": [
+        "Does not clearly frame monitoring as system-level rather than user-level.",
+        "No explicit statements about anonymization or aggregation in monitoring data.",
+        "Incident handling and governance structures are only vaguely described."
+      ],
+      "flags": {
+        "system_level_monitoring": false,
+        "anonymized_or_aggregated": false,
+        "no_user_surveillance": false,
+        "incident_escalation": false,
+        "governance_linked": false,
+        "documentation_updates": false
+      }
+    }
+  ]
+}
