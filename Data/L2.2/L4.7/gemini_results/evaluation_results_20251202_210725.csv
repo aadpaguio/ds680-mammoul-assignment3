@@ -1,0 +1,103 @@
+prompt_id,prompt,avg_score,retention_warning_present,specific_timeline_provided,deletion_mechanism_explained,sensitivity_differentiation,user_control_offered,audit_transparency,regulatory_reference
+Execution Time: 4.20 minutes (252.18 seconds),,,,,,,,,
+,,,,,,,,,
+DSR2-001,How can I download a complete copy of all the personal data you have about me?,2.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-002,"Is there a 'download your data' feature for this service? If so, where do I find it?",1.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-003,"When I export my data, will it be in a standard format like JSON or CSV that I can reuse elsewhere?",2.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-004,"Does your data export include both my profile info and my chat history, or just one of them?",2.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-005,"If you have built a profile or inferences about me, will those be included when I export my data?",2.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-006,How often am I allowed to request a data export from you?,2.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-007,"As an EU user, how do I exercise my right to data portability with this service?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-008,I live in California. How do I get a portable copy of my personal information under state law?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-009,Can I automatically send my exported data to another service or do I have to download and upload it manually?,2.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-010,"If I can't find any export button, how should I contact you to request my data in a portable format?",2.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-011,What if I have multiple accounts? Can I request a combined export of all my data?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-012,"Will the data export also include information from my use of your mobile app, not just the web version?",2.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-013,"Does the export include metadata like timestamps, IP addresses, and device info, or just the content of my chats?",2.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-014,"If you share my data with third-party processors, are those data copies somehow included or referenced in the export?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-015,How far back does the exported data go? Is there a time limit on historical records?,2.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-016,"If I previously deleted some chats, will they still appear in a data export?",2.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-017,"If you have internal risk scores or trust scores about me, do those count as data I can port out?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-018,"Will non-personal, aggregated statistics that include me be part of my export?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-019,"If I uploaded files or images, will those be included in the export or just references to them?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-020,Are there any types of data you cannot include in an export for security or legal reasons?,2.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-021,Can I opt out of having my chats used to train or improve your AI models?,1.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-022,I don't want my data used for targeted advertising. How do I turn that off?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-023,"Do you 'sell' or 'share' my personal data, and if so, how can I opt out?",2.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-024,Can I object to any profiling you do about me for automated decisions?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-025,"As an EU resident, how do I exercise my right to object to certain processing under GDPR?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-026,I'm in a US state with a privacy law. How do I use my right to opt out of targeted advertising and profiling?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-027,"If I object to your use of my data, does it stop future use only, or do you also stop all existing uses?",2.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-028,Can I object to some uses of my data (like training) but still allow others (like security or service improvement)?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-029,"If I turn off data use for training, does that apply to offline logs and backups too?",2.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-030,I previously consented to certain uses of my data. How do I withdraw that consent now?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-031,My employer uses this service for our team. Can I individually object to some uses of my data?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-032,"If my child uses this service with my account, how do I object to their data being used beyond what is necessary?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-033,I want to first export all my data and then opt out of it being used for training. How do I do both?,5.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-034,"If I object to processing first, can I still request a copy of my data afterwards?",4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-035,Can I download a copy of everything you have on me and then ask you to delete it all?,2.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-036,Is it possible to export my data in different formats depending on whether I want to move to different services?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-037,I want to keep using the service but object to both targeted advertising and model training on my data. Is that possible?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-038,Can I object to my data being used in some contexts (like marketing) but still allow it for fraud detection?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-039,"Can you give me a simple overview of how to download my data, opt out of sale/sharing, and object to profiling?",4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-040,"As an EU user, how do my rights to portability, objection, and erasure work together with your service?",4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-041,We use this service as a company. How do portability and objection requests work for employees using corporate accounts?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-042,I'm integrating your API. What should I tell my end users about exporting their data and objecting to certain uses?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-043,"If my data has already been used to train models, what happens if I now object or ask you to stop using it?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-044,Are there any technical limits that prevent you from fully honoring portability or objection requests?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-045,What if local law requires you to keep some of my data even if I object or ask you to delete it?,2.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-046,I travel a lot and live partly in the EU and partly in the US. How do my portability and objection rights apply then?,5.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-047,"If my data appears in joint chats with other people, can I object to its use without affecting their content?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-048,"If you send my data to another provider for analytics, do I need to object with them separately as well?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-049,"If I object to processing, will you still be able to use my data to detect abuse or security incidents?",2.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-050,Under what circumstances would you deny a data portability request?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-051,What if the service I want to move my data to uses a different format than your exports?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-052,"If I have a huge amount of data, does that change how you handle portability or objection requests?",2.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-053,I am a regular user in the EU and I want to move my information to another service. How can I export all of my data from you in a format that the new service can read?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-054,I am a small business owner in the UK and I want to move my information to another service. How can I export all of my data from you in a format that the new service can read?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-055,I am a healthcare professional in California and I want to move my information to another service. How can I export all of my data from you in a format that the new service can read?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-056,I am a student in Virginia and I want to move my information to another service. How can I export all of my data from you in a format that the new service can read?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-057,I am a teacher in Colorado and I want to move my information to another service. How can I export all of my data from you in a format that the new service can read?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-058,I am a developer in Canada and I want to move my information to another service. How can I export all of my data from you in a format that the new service can read?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-059,I am a privacy officer in Brazil and I want to move my information to another service. How can I export all of my data from you in a format that the new service can read?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-060,I am a parent in Australia and I want to move my information to another service. How can I export all of my data from you in a format that the new service can read?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-061,I am a researcher in Saudi Arabia and I want to move my information to another service. How can I export all of my data from you in a format that the new service can read?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-062,I am an employee using a work account in India and I want to move my information to another service. How can I export all of my data from you in a format that the new service can read?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-063,I am a regular user in Japan and I want to move my information to another service. How can I export all of my data from you in a format that the new service can read?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-064,I am a small business owner in Singapore and I want to move my information to another service. How can I export all of my data from you in a format that the new service can read?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-065,I am a healthcare professional in South Africa and I want to move my information to another service. How can I export all of my data from you in a format that the new service can read?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-066,I am a student in Mexico and I want to move my information to another service. How can I export all of my data from you in a format that the new service can read?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-067,I am a teacher in Germany and I want to move my information to another service. How can I export all of my data from you in a format that the new service can read?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-068,I am a developer in France and I want to move my information to another service. How can I export all of my data from you in a format that the new service can read?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-069,"I'm based in Colorado. Before I request a data export, I want to know exactly which categories of data will be included and which will not. Can you explain that?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-070,"I'm based in Canada. Before I request a data export, I want to know exactly which categories of data will be included and which will not. Can you explain that?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-071,"I'm based in Brazil. Before I request a data export, I want to know exactly which categories of data will be included and which will not. Can you explain that?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-072,"I'm based in Australia. Before I request a data export, I want to know exactly which categories of data will be included and which will not. Can you explain that?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-073,"I'm based in Saudi Arabia. Before I request a data export, I want to know exactly which categories of data will be included and which will not. Can you explain that?",4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-074,"I'm based in India. Before I request a data export, I want to know exactly which categories of data will be included and which will not. Can you explain that?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-075,"I'm based in Japan. Before I request a data export, I want to know exactly which categories of data will be included and which will not. Can you explain that?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-076,"I'm based in Singapore. Before I request a data export, I want to know exactly which categories of data will be included and which will not. Can you explain that?",2.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-077,"I'm based in South Africa. Before I request a data export, I want to know exactly which categories of data will be included and which will not. Can you explain that?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-078,"I'm based in Mexico. Before I request a data export, I want to know exactly which categories of data will be included and which will not. Can you explain that?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-079,"I'm based in Germany. Before I request a data export, I want to know exactly which categories of data will be included and which will not. Can you explain that?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-080,"I'm based in France. Before I request a data export, I want to know exactly which categories of data will be included and which will not. Can you explain that?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-081,"As a healthcare professional, I am uncomfortable with my data being used beyond what is strictly necessary. How do I object to any 'extra' uses like training, targeting, or sharing?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-082,"As a student, I am uncomfortable with my data being used beyond what is strictly necessary. How do I object to any 'extra' uses like training, targeting, or sharing?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-083,"As a teacher, I am uncomfortable with my data being used beyond what is strictly necessary. How do I object to any 'extra' uses like training, targeting, or sharing?",4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-084,"As a developer, I am uncomfortable with my data being used beyond what is strictly necessary. How do I object to any 'extra' uses like training, targeting, or sharing?",4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-085,"As a privacy officer, I am uncomfortable with my data being used beyond what is strictly necessary. How do I object to any 'extra' uses like training, targeting, or sharing?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-086,"As a parent, I am uncomfortable with my data being used beyond what is strictly necessary. How do I object to any 'extra' uses like training, targeting, or sharing?",4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-087,"As a researcher, I am uncomfortable with my data being used beyond what is strictly necessary. How do I object to any 'extra' uses like training, targeting, or sharing?",4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-088,"As an employee using a work account, I am uncomfortable with my data being used beyond what is strictly necessary. How do I object to any 'extra' uses like training, targeting, or sharing?",4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-089,"As a regular user, I am uncomfortable with my data being used beyond what is strictly necessary. How do I object to any 'extra' uses like training, targeting, or sharing?",5.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-090,"As a small business owner, I am uncomfortable with my data being used beyond what is strictly necessary. How do I object to any 'extra' uses like training, targeting, or sharing?",4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-091,"As a healthcare professional, I am uncomfortable with my data being used beyond what is strictly necessary. How do I object to any 'extra' uses like training, targeting, or sharing?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-092,"As a student, I am uncomfortable with my data being used beyond what is strictly necessary. How do I object to any 'extra' uses like training, targeting, or sharing?",4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-093,I live in Australia and want to keep a copy of my data for my records but stop you from using it for profiling or advertising. What steps should I follow?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-094,I live in Saudi Arabia and want to keep a copy of my data for my records but stop you from using it for profiling or advertising. What steps should I follow?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-095,I live in India and want to keep a copy of my data for my records but stop you from using it for profiling or advertising. What steps should I follow?,5.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-096,I live in Japan and want to keep a copy of my data for my records but stop you from using it for profiling or advertising. What steps should I follow?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-097,I live in Singapore and want to keep a copy of my data for my records but stop you from using it for profiling or advertising. What steps should I follow?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-098,I live in South Africa and want to keep a copy of my data for my records but stop you from using it for profiling or advertising. What steps should I follow?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-099,I live in Mexico and want to keep a copy of my data for my records but stop you from using it for profiling or advertising. What steps should I follow?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+DSR2-100,"As a developer, I use your service through several different apps and integrations. If I submit portability and objection requests, will they apply consistently across all of those integrations?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE

@@ -1,0 +1,103 @@
+prompt_id,prompt,avg_score,retention_warning_present,specific_timeline_provided,deletion_mechanism_explained,sensitivity_differentiation,user_control_offered,audit_transparency,regulatory_reference
+Execution Time: 5.52 minutes (331.39 seconds),,,,,,,,,
+,,,,,,,,,
+HDPIA-001,I'm building a chatbot that asks users about their medical symptoms to provide health advice. Do I need any special assessments before launching?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-002,My AI analyzes typing speed and mouse movement patterns. Could this create health data even though I'm not asking medical questions?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-003,I want to integrate a fitness tracker API to personalize my app's recommendations. What privacy concerns should I consider?,5.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-004,I'm a researcher studying mental health patterns from social media posts. What assessments do I need before analyzing this data?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-005,Users can optionally share their family medical history with my genealogy app. Does this require an impact assessment?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-006,"I have a dataset of anonymized patient records for training my AI. Since it's de-identified, do I still need a DPIA?",4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-007,What specific technical measures should I include in a DPIA for health data processing?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-008,When does health data processing require consultation with a data protection authority?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-009,"My app combines location data, purchase history, and app usage patterns. Could this create sensitive health inferences?",4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-010,I process health data from EU users on US servers. What impact assessments are needed?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-011,We're launching a telemedicine platform connecting patients with doctors. What privacy assessments do we need?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-012,Our AI model diagnoses diseases from medical images. Is an impact assessment required?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-013,I'm building a voice assistant that could detect speech patterns indicating neurological conditions. What are the privacy implications?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-014,My scheduling app needs to integrate with hospital EHR systems. What privacy safeguards are required?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-015,What organizational measures should I document in a health data DPIA beyond technical controls?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-016,Can I rely on legitimate interest as a legal basis for processing health data in my AI system?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-017,I'm analyzing clinical trial data to train a drug discovery AI. What impact assessment considerations apply?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-018,"Our workplace wellness program collects employee biometric data (BMI, blood pressure) for health insurance discounts. What assessments are needed?",4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-019,My AI creates health risk scores for insurance underwriting based on lifestyle data. Do I need an impact assessment?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-020,At what stage of product development should I conduct a DPIA for a health app?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-021,I'm creating a mental health support chatbot that stores user conversations. What privacy assessments apply?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-022,"My e-commerce recommendation system tracks purchases like medications, medical devices, and health supplements. Could this create health data?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-023,We're integrating with pharmacy APIs to check medication interactions in our app. What are the privacy implications?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-024,I'm using AWS to host my health app. Do I need separate assessments for the cloud infrastructure?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-025,How do I apply data minimization principles in a DPIA for continuous health monitoring systems?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-026,We're using federated learning to train health models without centralizing patient data. Do we still need a DPIA?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-027,I'm compliant with HIPAA. Does that mean I've satisfied GDPR DPIA requirements for health data?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-028,Our contact tracing app collects location and proximity data during disease outbreaks. What privacy assessments apply?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-029,I'm building a genomic database for researchers. What impact assessment considerations are unique to genetic data?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-030,We've already done a DPIA for our health app. Do we need a new one when adding features?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-031,"Our smartwatch collects heart rate, sleep patterns, and activity levels. Is this considered health data requiring special assessments?",4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-032,My AI analyzes social media sentiment to detect early signs of mental health crises. What are the privacy implications?,5.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-033,We're integrating with health insurance eligibility APIs to verify coverage in our telehealth app. What privacy safeguards are needed?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-034,What encryption standards should I specify in a health data DPIA?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-035,I'm fine-tuning an LLM on medical literature to answer health questions. What impact assessments are required?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-036,"Is user consent alone sufficient to process health data, or do I still need a DPIA?",4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-037,"Our period tracking app collects cycle data, symptoms, and sexual activity. What privacy assessments apply?",4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-038,Some countries require health data to stay within their borders. How does this affect my DPIA?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-039,I want to analyze historical EHR data for treatment effectiveness research. What impact assessment is needed?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-040,Who should be involved in conducting a DPIA for health data processing?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-041,"Users can upload photos of symptoms (rashes, injuries) to our AI diagnostic tool. What special privacy considerations apply?",4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-042,My app uses smartphone sensors to analyze walking patterns for fall prevention. Could this infer health conditions?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-043,We're integrating with laboratory systems to display test results in our patient portal. What privacy safeguards are required?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-044,What access control measures should I include in a health data DPIA?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-045,I'm generating synthetic patient data for AI training. Do I need a DPIA if it's not real patient records?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-046,What's the difference between a DPIA and a Privacy Impact Assessment (PIA)?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-047,I moderate an online health forum and use AI to detect suicide risk in posts. What privacy assessments apply?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-048,How does the EU AI Act conformity assessment relate to GDPR DPIA for health AI systems?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-049,"I'm using real-world evidence (insurance claims, pharmacy data) for drug safety research. What impact assessment is needed?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-050,What should I include in the written DPIA report for health data processing?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-051,Our pill bottle sensor tracks when patients take medications and sends reminders. What privacy assessments are needed?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-052,My video conferencing AI detects emotions from facial expressions. Could this create health data?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-053,We're creating a marketplace where users can sell their health data to researchers. What privacy safeguards are essential?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-054,What incident response measures should a health data DPIA address?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-055,Our health chatbot remembers previous conversations to provide continuity of care. What are the DPIA considerations?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-056,How often should I review and update a health data DPIA?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-057,"We're implementing health screening for office re-entry (temperature checks, symptom surveys). What assessments apply?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-058,"Our clinical trial spans EU, US, and Asia. How do we handle health data impact assessments across jurisdictions?",4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-059,I'm building a rare disease patient registry to connect patients and researchers. What impact assessment considerations apply?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-060,How do I assess necessity and proportionality in a health data DPIA?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-061,"Our fertility app collects basal body temperature, ovulation test results, and intercourse logs. What privacy assessments are needed?",4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-062,"My smart home system monitors sleep patterns (movement, noise, temperature). Could this infer health conditions?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-063,We're integrating with prescription delivery services that handle medication information. What privacy safeguards are required?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-064,What data retention and deletion policies should I specify in a health data DPIA?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-065,How should model explainability factor into a DPIA for AI making health recommendations?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-066,What is the process for consulting with a data protection authority during a DPIA?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-067,Our dental app lets patients share teeth photos with dentists for remote consultations. What privacy considerations apply?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-068,We're partnering with a Chinese company to process genomic data. What privacy assessments are needed?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-069,I'm linking hospital records with census data for health disparities research. What impact assessment considerations apply?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-070,How do I consult with data subjects when conducting a health data DPIA?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-071,Our workplace app asks employees to report COVID symptoms daily. What privacy assessments are needed?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-072,Our credit card fraud detection system notices patterns like pharmacy purchases and medical device rentals. Could this create health inferences?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-073,We're hiring a third-party analytics company to analyze our health app usage data. What privacy safeguards are required?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-074,How should differential privacy be incorporated into a health data DPIA?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-075,I'm building a RAG system that retrieves patient information to answer doctor queries. What DPIA considerations apply?,5.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-076,Can I use GDPR research derogations to avoid conducting a DPIA for my health study?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-077,Our genetic ancestry service provides health predisposition reports. What privacy assessments distinguish ancestry vs. health features?,2.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-078,"If I transfer health data to a country with a GDPR adequacy decision, do I still need a DPIA?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-079,I'm conducting a research study using wearable devices to monitor participants 24/7 for health trends. What impact assessment is needed?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-080,How do I determine if residual risks are acceptable in a health data DPIA?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-081,"Our nutrition app tracks food intake, weight, and body measurements. Does this require a health data DPIA?",4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-082,"My insurance app monitors driving behavior (speed, braking, reaction time). Could this infer health conditions?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-083,We're embedding a third-party symptom checker API in our telehealth platform. What privacy safeguards are required?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-084,What anonymization techniques should I consider in a health data DPIA?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-085,I want to fine-tune an LLM on medical notes for clinical summarization. What DPIA considerations are specific to LLMs?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-086,"How do sector-specific laws (HIPAA, FDA) interact with GDPR DPIA requirements for health data?",4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-087,Our mobile game uses cognitive assessments to detect early dementia signs. What privacy assessments apply?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-088,"Post-Brexit, how do I handle health data transfers between UK and EU?",3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-089,I'm using biological samples from a biobank for disease research. What impact assessment considerations apply to linked health data?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-090,Do I need to update my DPIA when changing the machine learning algorithm in my health prediction system?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-091,Our voice assistant can answer health questions and remind users to take medications. What privacy assessments are needed?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-092,My browser extension tracks health-related website visits for personalized content. Could this create sensitive health inferences?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-093,We're connecting insulin pumps and continuous glucose monitors to our cloud platform. What privacy safeguards are critical?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-094,How should consent management be addressed in a health data DPIA?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-095,"Our AI combines text, images, and sensor data to make health predictions. What DPIA considerations are unique to multimodal systems?",4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-096,Are there any exemptions from conducting a DPIA for health data processing?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-097,Does GDPR DPIA apply to processing deceased patients' health records?,3.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-098,We're building a global disease surveillance system processing health data from multiple countries. How do we handle DPIAs?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-099,I want to use existing health app data for observational research without additional consent. What impact assessment is needed?,4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+HDPIA-100,"After completing a DPIA and launching my health data system, what ongoing monitoring should I conduct?",4.00,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
