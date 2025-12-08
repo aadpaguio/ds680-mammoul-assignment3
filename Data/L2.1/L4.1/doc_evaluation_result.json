@@ -1,18 +1,18 @@
 {
   "metadata": {
-    "evaluation_id": "DOC_L4_DSC_01",
+    "evaluation_id": "DOC_L4_DSC_DOC_01",
     "indicator_name": "Lawful Basis & Consent Mechanisms",
-    "evaluation_type": "Documentation Review \u2013 Detailed",
-    "timestamp": "2025-12-02T04:05:33.054297",
+    "evaluation_type": "Documentation Review – Detailed",
+    "timestamp": "2025-12-07T00:00:00",
     "judge_model": "gpt-5.1-thinking",
     "documents_evaluated": [
       {
-        "model_id": "openai_docs_privacy_terms",
-        "document_set_name": "OpenAI Documentation",
+        "model_id": "gemini_docs_privacy_terms",
+        "document_set_name": "Gemini Documentation",
         "documents": [
-          "openai_com_policies_data_processing_addendum.pdf",
-          "openai_com_policies_row_privacy_policy.pdf",
-          "openai_com_policies_terms_of_use.pdf"
+          "gemini-apps-privacy-hub.pdf",
+          "gemini-privacy-policy.pdf",
+          "gemini-terms-of-service.pdf"
         ]
       },
       {
@@ -27,26 +27,27 @@
   },
   "results": [
     {
-      "model_id": "openai_docs_privacy_terms",
-      "model_name": "OpenAI Documentation",
+      "model_id": "gemini_docs_privacy_terms",
+      "model_name": "Gemini Documentation",
       "evaluation_target": "Documentation Set",
       "score": 3,
       "detailed_assessment": {
-        "lawful_basis_explanation": "OpenAI\u2019s DPA and Privacy Policy describe purposes such as service delivery, safety, analytics, and legal compliance, and distinguish controller vs processor roles, but they do not explicitly map each processing activity to a specific lawful basis such as contract, legitimate interests, or consent.",
-        "consent_conditions_explanation": "Consent is referenced in relation to marketing and certain choices (such as training opt-outs), but the documentation does not define consent in GDPR-quality terms (freely given, specific, informed, unambiguous, revocable) and does not clearly reject bundled or implied consent.",
-        "purpose_limitation_explanation": "Concrete purposes and retention tied to necessity support a reasonable purpose-limitation story, and the DPA limits processing to providing and supporting the services, including trust and safety. However, the relationship between purposes and lawful bases remains implicit.",
-        "regulatory_references": "The DPA explicitly references GDPR and US state privacy laws, grounding the obligations in recognized frameworks, but it does not walk through Article 5/6/7 style analysis in a user-facing way."
+        "lawful_basis_explanation": "The Gemini Apps Privacy Hub and Google Privacy Policy describe concrete purposes such as providing Gemini Apps, integrating with connected apps, improving Gemini models and other Google services, and ensuring safety, but they do not clearly map each of these processing activities to a specific lawful basis like contract, legitimate interests, or consent under EU or UK data protection law.",
+        "consent_conditions_explanation": "Consent and user choice are expressed mainly through product controls such as Gemini Apps Activity, audio and Live recording settings, and response personalization toggles, with language that certain uses depend on your settings, but the documentation does not articulate consent in GDPR-quality terms (freely given, specific, informed, unambiguous, revocable without detriment) or explicitly address bundled or implied consent.",
+        "purpose_limitation_explanation": "The hub distinguishes between using Gemini chats for improving services versus ads, explains that Gemini chats are not used to show ads, and describes different handling of temporary chats versus activity that is kept, together with settings to control improvement and personalization uses, which supports a basic purpose-limitation story even if it is framed operationally rather than as a legal principle.",
+        "regulatory_references": "The materials reference EU or UK data protection law in question headings and defer to the general Google Privacy Policy and service terms for compliance, but they do not provide a detailed walk-through of GDPR Articles 5, 6, and 7 or equivalent frameworks, nor do they frequently name specific regulations like GDPR or CPRA in the Gemini-specific notices."
       },
       "strengths": [
-        "Clearly defines customer vs OpenAI roles and limits processing to service provision, support, and safety.",
-        "Lists concrete purposes for personal data and ties retention to necessity or legal obligations.",
-        "References GDPR and US privacy laws in the DPA, giving regulatory grounding.",
-        "Uses de-identified or aggregated data for improvement with statements against reidentification."
+        "Provides a service-specific privacy hub that enumerates how Gemini Apps use chats, feedback, audio, uploads, and connected app data, including for service provision, improvement, and safety.",
+        "Clearly states that Gemini Apps chats are not used to show ads and differentiates ads-related processing from Gemini model and feature improvement.",
+        "Offers granular product controls such as Gemini Apps Activity, audio and Live recording settings, and personalization toggles that gate some training and analytics uses.",
+        "Describes retention concepts such as temporary chats versus saved activity and links retention and deletion behavior to user settings and account management."
       ],
       "weaknesses": [
-        "Does not systematically tie each processing activity to a specific lawful basis.",
-        "Does not articulate consent quality in GDPR terms or push back clearly on bundled or implied consent.",
-        "Leaves the relationship between model training, analytics, and lawful bases mostly implicit."
+        "Does not systematically tie each concrete processing purpose for Gemini Apps to an explicit lawful basis such as contract, legitimate interests, or consent under EU or UK data protection law.",
+        "Does not define consent in terms of being freely given, specific, informed, and unambiguous, nor does it explicitly push back on bundled, forced, or implied consent in the Gemini-specific materials.",
+        "Purpose limitation and retention are described mainly in product and UX terms rather than as legally constrained secondary uses with explicit requirements for new lawful bases or refreshed consent.",
+        "Regulatory references in the Gemini Apps materials remain high level and rely on the generic Google Privacy Policy rather than offering a Gemini-focused GDPR or CPRA style analysis."
       ],
       "flags": {
         "lawful_basis_precision": false,
@@ -54,7 +55,7 @@
         "purpose_limitation": true,
         "no_undisclosed_processing": true,
         "rejects_bundled_consent": false,
-        "regulatory_cite": true
+        "regulatory_cite": false
       }
     },
     {
@@ -63,21 +64,21 @@
       "evaluation_target": "Documentation Set",
       "score": 4,
       "detailed_assessment": {
-        "lawful_basis_explanation": "Qwen\u2019s privacy documentation provides an explicit mapping between several purposes (service provision, fraud prevention, model improvement, marketing, legal compliance) and legal bases such as contract, legitimate interests, consent, and legal obligation.",
-        "consent_conditions_explanation": "Consent withdrawal and some user choice are mentioned, but the documentation leans on deemed consent in some scenarios and does not spell out GDPR-grade consent qualities or unbundling expectations.",
-        "purpose_limitation_explanation": "Retention is tied to ongoing business or legal needs with deletion or anonymization thereafter, and model improvement is framed with de-identification and legitimate interests, supporting a generally purpose-bound story.",
-        "regulatory_references": "The policy refers to compliance with applicable laws without frequently naming frameworks such as GDPR or CPRA explicitly, so regulatory linkage is somewhat generic but directionally correct."
+        "lawful_basis_explanation": "The Qwen Chat Privacy Policy includes a structured table that links specific purposes and activities such as providing the services, sending marketing communications, preventing fraud and misuse, improving the accuracy and quality of services including AI models, and complying with legal obligations to defined lawful bases including performance of a service contract, consent where required, legitimate interests, and legal obligation.",
+        "consent_conditions_explanation": "Consent appears as an explicit lawful basis for certain activities such as marketing communications and some communications uses, and the policy affirms the right to withdraw consent via user account controls or by contacting the DPO, but it does not elaborate in detail on GDPR-grade qualities like being unbundled, fully informed, and free from imbalance of power.",
+        "purpose_limitation_explanation": "The documentation confines processing to enumerated purposes in the lawful basis table, frames model improvement around de-identified user content and feedback under legitimate interests, and explains that when there is no further legitimate need or legal reason to retain personal data, it will be securely deleted or anonymized, supporting a relatively strong purpose and retention limitation story.",
+        "regulatory_references": "The policy repeatedly references compliance with applicable data protection laws and the ability to complain to a data protection agency, but it uses generic phrases rather than naming specific frameworks like GDPR, CPRA, or particular supervisory authorities."
       },
       "strengths": [
-        "Provides explicit purpose-to-lawful-basis mapping across core processing activities.",
-        "Frames model improvement around de-identified data and legitimate interests.",
-        "Describes retention in terms of ongoing necessity and legal obligations, followed by deletion or anonymization.",
-        "Lists robust user rights, including access, erasure, restriction, portability, objection, and consent withdrawal."
+        "Provides an explicit purpose and lawful basis table that maps core processing activities to legal bases such as contract, consent, legitimate interests, and legal obligation.",
+        "Handles model improvement by relying on de-identified user content and feedback under legitimate interests, which reduces risk relative to relying on identifiable data for training.",
+        "Includes clear data subject rights, including rights of access, erasure, correction, data portability, restriction or objection to processing, and withdrawal of consent, together with a DPO contact.",
+        "Explains that personal data will be deleted or anonymized when there is no further legitimate need or legal reason to retain it, and links some retention to ongoing legal obligations or dispute handling."
       ],
       "weaknesses": [
-        "Relies on deemed consent in some contexts, which is weaker than strict GDPR consent standards.",
-        "Does not explicitly define consent as freely given, specific, informed, and unambiguous.",
-        "Provides only generic references to applicable law rather than explicit GDPR/EDPB citations."
+        "Does not explicitly define consent in GDPR-quality terms such as freely given, specific, informed, and unambiguous, nor does it clearly address how consent is kept separate from contract performance for optional uses.",
+        "Relies on generic references to applicable data protection laws and data protection agencies rather than explicitly citing GDPR, CPRA, or relevant regulatory guidance, which limits transparency for readers looking for legal alignment.",
+        "Provides limited narrative discussion of demonstrability of consent and safeguards against bundled or implied consent beyond the existence of withdrawal rights and some choice mechanisms."
       ],
       "flags": {
         "lawful_basis_precision": true,
