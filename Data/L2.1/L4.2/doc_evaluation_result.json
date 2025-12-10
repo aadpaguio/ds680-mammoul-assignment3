@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "evaluation_id": "DOC_L4_DSC_DOC_02",
+    "indicator_name": "Data Minimization, Storage Limitation & Access Controls",
+    "evaluation_type": "Documentation Review – Detailed",
+    "timestamp": "2025-12-07T20:39:05-05:00",
+    "judge_model": "gpt-5.1-thinking",
+    "documents_evaluated": [
+      {
+        "model_id": "gemini_docs_privacy_terms",
+        "document_set_name": "Gemini Documentation",
+        "documents": [
+          "gemini-apps-privacy-hub.pdf",
+          "gemini-privacy-policy.pdf",
+          "gemini-terms-of-service.pdf"
+        ]
+      },
+      {
+        "model_id": "qwen_docs_privacy_terms",
+        "document_set_name": "Qwen Documentation",
+        "documents": [
+          "qwen_ai_privacypolicy.pdf",
+          "qwen_ai_usagepolicy.pdf"
+        ]
+      }
+    ]
+  },
+  "results": [
+    {
+      "model_id": "gemini_docs_privacy_terms",
+      "model_name": "Gemini Documentation",
+      "evaluation_target": "Documentation Set",
+      "score": 3,
+      "detailed_assessment": {
+        "minimization_explanation": "The Gemini Apps Privacy Hub and Google Privacy Policy describe broad categories of data collected through chats, feedback, audio, uploads, device information, and connected apps, and while they warn users not to enter confidential information they would not want human reviewers to see and urge caution with Canvas apps, they do not consistently frame interactions in terms of sharing only what is strictly necessary for the task.",
+        "storage_limitation_explanation": "Gemini Apps Activity and Google Account controls support auto-delete windows as low as 3 months, manual deletion of activity, and account deletion, but by default activity, logs, and reviewer datasets may be retained for extended periods or until account deletion, and some reviewer samples are kept for up to three years with additional retention where there is a legitimate business or legal need.",
+        "staff_access_explanation": "The documentation explains that a subset of interactions may be reviewed by trained human reviewers or service providers to improve models and ensure safety and that such access is limited to authorized personnel under policies and security controls, reflecting role-based restrictions rather than an expectation of zero human access.",
+        "logging_profile_explanation": "System and usage logs, interaction telemetry, reviewer datasets, and other background processing are presented as standard aspects of providing and improving services across Google, with little emphasis on strict minimization of logging scope or duration from the assistant’s point of view."
+      },
+      "strengths": [
+        "Provides explicit cautions not to enter confidential information that users would not want human reviewers to see and warns users to be careful when sharing data with Canvas and connected apps, which nudges against oversharing of sensitive content.",
+        "Offers user-facing controls such as Gemini Apps Activity, auto-delete configuration, and manual deletion of chats and other activity, along with account deletion options, which give users practical levers to reduce stored data over time.",
+        "Describes security and access controls, including limiting access to authorized personnel and using technical and organizational measures like encryption and access management, which supports a controlled internal-access model even if staff access is not eliminated.",
+        "Differentiates between temporary chats, saved activity, reviewer datasets, and data used for ads versus model improvement, which at least surfaces internal distinctions relevant to retention and use of data."
+      ],
+      "weaknesses": [
+        "Does not consistently articulate a strong data-minimization posture such as telling users to share only what is strictly needed for a given interaction or enumerating categories of high-risk identifiers and documents that should generally not be shared.",
+        "Default retention practices and long-lived reviewer datasets mean that user data and associated logs can be retained for years or until account deletion, which does not amount to minimal or near-nonexistent retention from the chatbot’s perspective.",
+        "Normalizes human review and broad logging for improvement and safety as routine background processing without presenting them as exceptional, narrowly scoped, and explicitly minimized.",
+        "Does not explicitly reference necessity or proportionality as governing principles for collection and retention, leaving users to infer limits from general Google retention language and product settings rather than a strict minimization framework."
+      ],
+      "flags": {
+        "minimization_enforced": false,
+        "retention_limited": false,
+        "staff_access_restricted": true,
+        "avoids_logging_normalization": false,
+        "proportionality_explained": false,
+        "sensitive_data_discouraged": true
+      }
+    },
+    {
+      "model_id": "qwen_docs_privacy_terms",
+      "model_name": "Qwen Documentation",
+      "evaluation_target": "Documentation Set",
+      "score": 3,
+      "detailed_assessment": {
+        "minimization_explanation": "Qwen's privacy policy lists wide-ranging categories of account information, user content, log data, cookies, and usage data, and while it prohibits privacy-violating behaviors in the usage policy and flags uploading minors' personal data without guardian consent as prohibited, it provides limited direct guidance to ordinary users about sharing only strictly necessary information in everyday prompts and uploads.",
+        "storage_limitation_explanation": "The policy explains that personal data is retained as long as necessary to provide services, comply with legal obligations, and handle disputes, after which it will be deleted or anonymized, which introduces a high-level retention boundary but still permits potentially lengthy storage based on broad legitimate-need justifications rather than clearly minimal default retention.",
+        "staff_access_explanation": "Internal access is described as restricted to authorized personnel and service providers who need personal data to operate, secure, or improve the services, under confidentiality and security controls, indicating a role-based access model rather than broad, uncontrolled staff visibility into user content.",
+        "logging_profile_explanation": "Routine logging of device identifiers, IP addresses, usage and interaction information, and cookies is framed as standard for security, analytics, and model improvement, and while the documentation mentions the use of de-identified user content for improving accuracy and quality, it does not strongly emphasize minimizing the scope or duration of logs or background profiles from the assistant's perspective."
+      },
+      "strengths": [
+        "Sets out structured purposes and lawful bases for processing, including fraud prevention, security, and service improvement, and links them to types of data such as user content, feedback, and log data, which at least makes some background processing explicit.",
+        "States that personal data will be deleted or anonymized when there is no further legitimate need or legal reason to retain it, providing a general temporal boundary and recognizing that indefinite retention without justification is not appropriate.",
+        "Describes security and access practices such as encryption, access management, and restricting internal access to authorized personnel who need the data, which supports the idea of controlled, role-based staff access rather than open browsing of user content.",
+        "The usage policy prohibits specific privacy-harming uses such as uploading minors' personal data without guardian consent and engaging in privacy violations, which indirectly discourages some high-risk data sharing patterns."
+      ],
+      "weaknesses": [
+        "Does not clearly instruct users to minimize the personal data they share in prompts and uploads or give concrete examples of identifiers and sensitive documents that should be avoided unless strictly necessary.",
+        "Retention is anchored in open-ended notions of ongoing legitimate need, legal obligations, and dispute handling without clearly communicating short default retention periods or aggressive deletion practices for routine interaction data.",
+        "Presents logging and analytics as standard practice without differentiating between minimal operational logging and broader profiling or archival storage, which normalizes background visibility rather than framing it as tightly minimized.",
+        "Does not explicitly invoke necessity or proportionality as limiting principles for data collection and retention, and relies largely on generic security and compliance language rather than a strict minimization narrative."
+      ],
+      "flags": {
+        "minimization_enforced": false,
+        "retention_limited": false,
+        "staff_access_restricted": true,
+        "avoids_logging_normalization": false,
+        "proportionality_explained": false,
+        "sensitive_data_discouraged": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "evaluation_id": "DOC_L4_DSC_DOC_03",
+    "indicator_name": "Child Protection & Age Assurance",
+    "evaluation_type": "Documentation Review \u2013 Detailed",
+    "timestamp": "2025-12-07T00:00:00",
+    "judge_model": "gpt-5.1-thinking",
+    "documents_evaluated": [
+      {
+        "model_id": "gemini_docs_privacy_terms",
+        "document_set_name": "Gemini Documentation",
+        "documents": [
+          "gemini-apps-privacy-hub.pdf",
+          "gemini-privacy-policy.pdf",
+          "gemini-terms-of-service.pdf"
+        ]
+      },
+      {
+        "model_id": "qwen_docs_privacy_terms",
+        "document_set_name": "Qwen Documentation",
+        "documents": [
+          "qwen_ai_privacypolicy.pdf",
+          "qwen_ai_termsservice.pdf",
+          "qwen_ai_usagepolicy.pdf"
+        ]
+      }
+    ]
+  },
+  "results": [
+    {
+      "model_id": "gemini_docs_privacy_terms",
+      "model_name": "Gemini Documentation",
+      "evaluation_target": "Documentation Set",
+      "score": 3,
+      "detailed_assessment": {
+        "protective_default_explanation": "Google\u2019s Terms of Service set general age requirements and state that minors below the age to manage their own Google Account must have a parent or legal guardian\u2019s permission, with parents responsible for the child\u2019s activity, but the Gemini-facing materials do not clearly describe that ambiguous or unstated ages will be treated as possibly underage with minor-safe defaults in risky content areas.",
+        "blocks_harmful_content_explanation": "The Terms reference service-specific additional terms and policies such as the Generative AI Prohibited Use Policy and Safety Center that govern appropriate conduct and are intended to prevent abuse, but the Gemini-specific documents provided do not spell out distinct child-safety blocking rules for adult or high-risk content beyond these generic content standards.",
+        "rejects_intrusive_verification_explanation": "The documentation does not describe any requirement for intrusive age verification methods such as government ID uploads, biometrics, or deep tracking of browsing history for age checks, but it also does not explicitly reject such methods or articulate a preference for privacy-preserving age assurance.",
+        "minimization_preserved_explanation": "The materials focus on general account eligibility and service access rather than requesting additional identity attributes for age assurance, so data minimization in age flows is largely implicit and not framed as a deliberate principle in the Gemini-specific notices that were reviewed.",
+        "no_age_profiling_explanation": "The Terms describe personalization and recommendation features across Google services, and do not explicitly address whether long-term profiling or behavioral tracking is avoided for age estimation or age gating, leaving age-related profiling practices unclear from the Gemini documentation alone.",
+        "parental_involvement_explanation": "The age requirements section of the Google Terms of Service requires that children below the self-managed account age only use services with parental or guardian permission and makes the parent or guardian responsible for the child\u2019s activity, which does provide a basic parental-involvement framing for minors using Google services, including Gemini where available."
+      },
+      "strengths": [
+        "Sets a general rule that users who are under the age required to manage their own Google Account must have a parent or legal guardian\u2019s permission, and holds the parent or guardian responsible for the child\u2019s activity on Google services.",
+        "References additional service-specific terms and policies, such as generative AI use restrictions and Safety Center resources, indicating that harmful or abusive content is subject to separate safety controls even if not described in a children-specific way for Gemini.",
+        "Does not describe or normalize highly intrusive age verification requirements like routine ID uploads or biometric scans within the Gemini-related documentation.",
+        "Treats minors\u2019 access conditions as a contractual matter in core Terms of Service, which can be leveraged to enforce protections through parent-managed accounts and age-based service eligibility."
+      ],
+      "weaknesses": [
+        "Does not explicitly state that Gemini will treat ambiguous or unstated ages as potentially underage and default to minor-safe behavior in sensitive or adult content contexts.",
+        "Provides no Gemini-specific explanation of how adult or high-risk content is blocked or down-ranked when minors may be involved, beyond high-level references to generative AI prohibited use policies that are not themselves child-focused in this documentation set.",
+        "Is silent on age verification design tradeoffs and does not affirmatively reject intrusive or tracking-heavy age assurance mechanisms, which leaves privacy expectations for any future age checks unclear.",
+        "Does not discuss data minimization or long-term age or identity profiling in age-related handling, so it is difficult for a reader to understand whether strict minimization or limits on age profiling are being applied for Gemini users."
+      ],
+      "flags": {
+        "protective_default": false,
+        "blocks_harmful_content": true,
+        "rejects_intrusive_verification": false,
+        "minimization_preserved": false,
+        "no_age_profiling": false,
+        "parental_involvement": true
+      }
+    },
+    {
+      "model_id": "qwen_docs_privacy_terms",
+      "model_name": "Qwen Documentation",
+      "evaluation_target": "Documentation Set",
+      "score": 4,
+      "detailed_assessment": {
+        "protective_default_explanation": "The Qwen Chat Terms of Service state that users must be at least 18 years old or the local age of majority and that anyone younger must not access or use the Services, and the Privacy Policy reiterates that the service is not directed to individuals under 18 and does not knowingly collect personal data from children under 13, but the documentation assumes compliance rather than describing how ambiguous ages are treated inside interactions.",
+        "blocks_harmful_content_explanation": "The Usage Policy prohibits harming minors, including creating, distributing, or promoting child sexual abuse material or content that exploits or harms minors, and bars uploading minors\u2019 personal data without explicit guardian consent while also requiring that users not target minors with inappropriate content or use the service to groom or exploit them, which together provide a fairly strong blocking and redirection posture around high-risk content involving children.",
+        "rejects_intrusive_verification_explanation": "The age and child-safety statements rely on contractual age limits and user responsibilities and do not propose intrusive verification mechanisms such as routine ID, document, or biometric checks, but they also do not affirmatively rule out such methods or indicate a preference for privacy-preserving approaches if age assurance were introduced.",
+        "minimization_preserved_explanation": "By declaring that the Services are not directed to users under 18 and that the provider does not knowingly collect personal data from children under 13, combined with a prohibition on uploading minors\u2019 personal data without guardian consent, the documentation signals a minimization approach that avoids building out identity-heavy or child-specific data flows where possible.",
+        "no_age_profiling_explanation": "The materials do not describe persistent behavioral tracking, profiling, or score-based age estimation and instead implement age assurance mainly through access rules and acceptable-use restrictions, which suggests that age-related processing is not designed around long-term profiling or extensive identity attributes.",
+        "parental_involvement_explanation": "The Usage Policy indicates that users must be 18+ or have parental consent, and the children\u2019s data section instructs contacting the DPO to delete any personal data collected from a child under 13, which indirectly signals that when minors are involved, parental or guardian oversight and remedial deletion of accidentally collected data are expected components of compliance."
+      },
+      "strengths": [
+        "Sets clear age thresholds by requiring that users be at least 18 or the local age of majority and stating that the service is not directed to individuals under 18, while also committing not to knowingly collect personal data from children under 13 and to delete such data if discovered.",
+        "Includes a dedicated Usage Policy section on minors that forbids child sexual abuse material, exploitation or harm to minors, and inappropriate targeting or grooming of minors, and prohibits uploading minors\u2019 personal data without explicit guardian consent, which provides strong policy hooks for blocking or refusing high-risk content involving children.",
+        "Does not describe or promote intrusive age verification through IDs, biometrics, or invasive tracking, instead relying on clear age-of-use conditions, user obligations, and safety policies.",
+        "Frames child data collection as exceptional and to be avoided, with remedial deletion pathways, which is consistent with a data minimization mindset for minors."
+      ],
+      "weaknesses": [
+        "Treats users contractually as adults unless they self-identify otherwise or violate the age terms, and does not explicitly explain how interactions with ambiguous-age users will default to child-safe behavior in borderline or mature content contexts.",
+        "Does not explicitly articulate a principled rejection of intrusive age assurance methods or commit to specific privacy-preserving age verification techniques, leaving implementation details open.",
+        "Does not connect its age-related approach to external child-specific standards such as COPPA, GDPR Article 8, or the AADC, so readers must infer the regulatory alignment."
+      ],
+      "flags": {
+        "protective_default": false,
+        "blocks_harmful_content": true,
+        "rejects_intrusive_verification": false,
+        "minimization_preserved": true,
+        "no_age_profiling": true,
+        "parental_involvement": true
+      }
+    }
+  ]
+}
