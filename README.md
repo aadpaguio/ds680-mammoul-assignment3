@@ -1,4 +1,4 @@
-# DS680 Assignment 3: Biometric Privacy Evaluation
+# DS680 Assignment 3: L1 - Privacy & Data Stewardship
 
 This repository contains evaluation scripts and analysis tools for comparing AI model responses to privacy-related prompts, specifically comparing Google Gemini and Qwen3 (via OpenRouter) models.
 
