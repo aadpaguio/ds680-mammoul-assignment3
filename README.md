@@ -6,6 +6,24 @@ This repository contains evaluation scripts and analysis tools for comparing AI 
 
 This project evaluates how different AI models respond to privacy-related prompts across multiple control areas (L2) and specific requirements (L4). Each prompt is tested against the models, and responses are evaluated by a judge model (GPT-5-nano) that scores them on a 1-5 scale based on compliance with data protection laws (GDPR, CCPA/CPRA).
 
+## Prerequisites
+
+**This project requires [`uv`](https://github.com/astral-sh/uv)**, a fast Python package installer and resolver. All Python commands in this repository use `uv` for dependency management and execution.
+
+**Install `uv`:**
+```bash
+# macOS/Linux
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Or via Homebrew (macOS)
+brew install uv
+
+# Or via pip
+pip install uv
+```
+
+See the [official uv documentation](https://docs.astral.sh/uv/) for installation instructions for other platforms.
+
 ## Directory Structure
 
 ```
@@ -222,12 +240,18 @@ Located in `analysis_reports/`, these markdown files contain comprehensive stati
 
 ## Setup
 
-1. **Install dependencies:**
+1. **Install `uv`** (if not already installed):
+   ```bash
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+   ```
+
+2. **Install dependencies:**
    ```bash
    uv sync
    ```
+   This will create a virtual environment and install all required packages from `pyproject.toml`.
 
-2. **Configure API keys:**
+3. **Configure API keys:**
    Create a `.env` file in the project root with:
    ```
    GOOGLE_API_KEY=your_gemini_api_key
@@ -235,7 +259,7 @@ Located in `analysis_reports/`, these markdown files contain comprehensive stati
    OPENROUTER_API_KEY=your_openrouter_api_key
    ```
 
-3. **Run evaluations:**
+4. **Run evaluations:**
    ```bash
    # Individual evaluation
    uv run python Data/evaluate_batch_gemini.py --l4 L2.1/L4.1
@@ -244,19 +268,21 @@ Located in `analysis_reports/`, these markdown files contain comprehensive stati
    ./run_evaluations_gemini.sh
    ```
 
-4. **Generate analysis reports:**
+5. **Generate analysis reports:**
    ```bash
    uv run python run_all_analyses_gemini.py
    ```
 
 ## Dependencies
 
-See `pyproject.toml` for full dependency list. Key packages:
+This project uses `uv` for dependency management. All dependencies are defined in `pyproject.toml` and locked in `uv.lock`. Key packages:
 - `google-generativeai` - Gemini API client
 - `openai` - OpenAI API client (for judge model)
 - `pandas` - Data manipulation
 - `scipy` - Statistical analysis
 - `python-dotenv` - Environment variable management
+
+To install dependencies, run `uv sync` (see Setup section above).
 
 ## Results Storage
 
