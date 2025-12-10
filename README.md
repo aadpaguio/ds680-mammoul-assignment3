@@ -61,7 +61,7 @@ See the [official uv documentation](https://docs.astral.sh/uv/) for installation
 │
 ├── run_evaluations_gemini.sh     # Batch evaluation script for Gemini
 ├── run_evaluations_qwen.sh       # Batch evaluation script for Qwen3
-├── run_all_analyses_gemini.py    # Statistical analysis generator
+├── run_all_analyses.py           # Statistical analysis generator
 └── pyproject.toml                # Python dependencies
 ```
 
@@ -190,7 +190,7 @@ chmod +x run_evaluations_qwen.sh
 - `BATCH_SIZE`: Pause after N requests
 - `BATCH_PAUSE`: Seconds to pause between batches
 
-### `run_all_analyses_gemini.py`
+### `run_all_analyses.py`
 
 Python script that performs statistical analysis comparing Gemini vs Qwen3 results.
 
@@ -203,7 +203,7 @@ Python script that performs statistical analysis comparing Gemini vs Qwen3 resul
 
 **Usage:**
 ```bash
-uv run python run_all_analyses_gemini.py
+uv run python run_all_analyses.py
 ```
 
 **Output:**
@@ -270,7 +270,7 @@ Located in `analysis_reports/`, these markdown files contain comprehensive stati
 
 5. **Generate analysis reports:**
    ```bash
-   uv run python run_all_analyses_gemini.py
+   uv run python run_all_analyses.py
    ```
 
 ## Dependencies
