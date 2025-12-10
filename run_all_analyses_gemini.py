@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Run statistical analysis comparing Gemini vs OpenRouter (Qwen3) results.
-Finds Gemini results in gemini_results/ subfolders and OpenRouter results in main L4 folders.
+Run statistical analysis comparing Gemini vs Qwen (OpenRouter) results.
+Finds Gemini results in gemini_results/ subfolders and Qwen results in qwen_results/ subfolders.
 Generates markdown reports organized by L4 folder.
 """
 
@@ -72,7 +72,7 @@ def extract_gemini_scores_and_flags(results):
 
 
 def extract_openrouter_scores_and_flags(results):
-    """Extract scores and flags from OpenRouter results (uses 'openrouter_trials' structure)."""
+    """Extract scores and flags from Qwen/OpenRouter results (uses 'openrouter_trials' structure)."""
     data = {
         'scores': [],
         'categories': [],
@@ -109,8 +109,8 @@ def extract_openrouter_scores_and_flags(results):
     return data
 
 
-def combine_data_by_prompt_id(gemini_data, openrouter_data):
-    """Combine Gemini and OpenRouter data, matching by prompt_id."""
+def combine_data_by_prompt_id(gemini_data, qwen_data):
+    """Combine Gemini and Qwen (OpenRouter) data, matching by prompt_id."""
     combined = {
         'gemini': {
             'scores': [],
@@ -130,21 +130,21 @@ def combine_data_by_prompt_id(gemini_data, openrouter_data):
     
     # Create prompt_id to index mapping for both datasets
     gemini_prompt_map = {pid: i for i, pid in enumerate(gemini_data['prompt_ids'])}
-    openrouter_prompt_map = {pid: i for i, pid in enumerate(openrouter_data['prompt_ids'])}
+    qwen_prompt_map = {pid: i for i, pid in enumerate(qwen_data['prompt_ids'])}
     
     # Find common prompt_ids
-    common_prompts = set(gemini_prompt_map.keys()) & set(openrouter_prompt_map.keys())
+    common_prompts = set(gemini_prompt_map.keys()) & set(qwen_prompt_map.keys())
     
     if not common_prompts:
-        print("WARNING: No common prompt_ids found between Gemini and OpenRouter results")
+        print("WARNING: No common prompt_ids found between Gemini and Qwen results")
         return combined
     
-    print(f"Found {len(common_prompts)} common prompts out of {len(gemini_prompt_map)} Gemini and {len(openrouter_prompt_map)} OpenRouter prompts")
+    print(f"Found {len(common_prompts)} common prompts out of {len(gemini_prompt_map)} Gemini and {len(qwen_prompt_map)} Qwen prompts")
     
     # Add data for common prompts only
     for prompt_id in sorted(common_prompts):
         gemini_idx = gemini_prompt_map[prompt_id]
-        openrouter_idx = openrouter_prompt_map[prompt_id]
+        qwen_idx = qwen_prompt_map[prompt_id]
         
         # Add Gemini data
         combined['gemini']['scores'].append(gemini_data['scores'][gemini_idx])
@@ -157,16 +157,16 @@ def combine_data_by_prompt_id(gemini_data, openrouter_data):
             if gemini_idx < len(gemini_data['flags'][flag_name]):
                 combined['gemini']['flags'][flag_name].append(gemini_data['flags'][flag_name][gemini_idx])
         
-        # Add OpenRouter data
-        combined['qwen3']['scores'].append(openrouter_data['scores'][openrouter_idx])
-        combined['qwen3']['categories'].append(openrouter_data['categories'][openrouter_idx])
-        combined['qwen3']['subcategories'].append(openrouter_data['subcategories'][openrouter_idx])
+        # Add Qwen data
+        combined['qwen3']['scores'].append(qwen_data['scores'][qwen_idx])
+        combined['qwen3']['categories'].append(qwen_data['categories'][qwen_idx])
+        combined['qwen3']['subcategories'].append(qwen_data['subcategories'][qwen_idx])
         combined['qwen3']['prompt_ids'].append(prompt_id)
         
-        # Add OpenRouter flags
-        for flag_name in openrouter_data['flags']:
-            if openrouter_idx < len(openrouter_data['flags'][flag_name]):
-                combined['qwen3']['flags'][flag_name].append(openrouter_data['flags'][flag_name][openrouter_idx])
+        # Add Qwen flags
+        for flag_name in qwen_data['flags']:
+            if qwen_idx < len(qwen_data['flags'][flag_name]):
+                combined['qwen3']['flags'][flag_name].append(qwen_data['flags'][flag_name][qwen_idx])
     
     return combined
 
@@ -390,12 +390,12 @@ def interpret_effect_size(d):
         return "large"
 
 
-def generate_markdown_report(l4_folder, gemini_metadata, openrouter_metadata, overall, category, flags):
+def generate_markdown_report(l4_folder, gemini_metadata, qwen_metadata, overall, category, flags):
     """Generate a markdown report from analysis results."""
     
     # Get model names from metadata
     gemini_model = gemini_metadata.get('test_model', 'Gemini') if gemini_metadata else 'Gemini'
-    qwen3_model = openrouter_metadata.get('openrouter_test_model', 'Qwen3-235B') if openrouter_metadata else 'Qwen3-235B'
+    qwen3_model = qwen_metadata.get('openrouter_test_model', 'Qwen3-235B') if qwen_metadata else 'Qwen3-235B'
     
     report = f"""# Statistical Analysis Report: Gemini vs OpenRouter (Qwen3)
 
@@ -411,11 +411,11 @@ def generate_markdown_report(l4_folder, gemini_metadata, openrouter_metadata, ov
         report += f"- **Gemini Prompts Evaluated:** {prompts_evaluated}\n"
         if 'timestamp' in gemini_metadata:
             report += f"- **Gemini Evaluation Timestamp:** {gemini_metadata.get('timestamp', 'N/A')}\n"
-    if openrouter_metadata:
-        prompts_evaluated = openrouter_metadata.get('prompts_evaluated', 'N/A')
-        report += f"- **OpenRouter Prompts Evaluated:** {prompts_evaluated}\n"
-        if 'timestamp' in openrouter_metadata:
-            report += f"- **OpenRouter Evaluation Timestamp:** {openrouter_metadata.get('timestamp', 'N/A')}\n"
+    if qwen_metadata:
+        prompts_evaluated = qwen_metadata.get('prompts_evaluated', 'N/A')
+        report += f"- **Qwen Prompts Evaluated:** {prompts_evaluated}\n"
+        if 'timestamp' in qwen_metadata:
+            report += f"- **Qwen Evaluation Timestamp:** {qwen_metadata.get('timestamp', 'N/A')}\n"
     report += "\n"
     
     # Overall comparison
@@ -490,7 +490,7 @@ def generate_markdown_report(l4_folder, gemini_metadata, openrouter_metadata, ov
 
 
 def find_l4_folders(data_dir):
-    """Find all L4 folders that have both Gemini and OpenRouter results."""
+    """Find all L4 folders that have both Gemini and Qwen (OpenRouter) results."""
     l4_folders = {}
     
     # Find all L4 folders
@@ -502,16 +502,17 @@ def find_l4_folders(data_dir):
             gemini_results_dir = l4_dir / "gemini_results"
             gemini_files = list(gemini_results_dir.glob("evaluation_results_*.json")) if gemini_results_dir.exists() else []
             
-            # Check for OpenRouter results (in main L4 folder)
-            openrouter_files = list(l4_dir.glob("evaluation_results_*.json"))
+            # Check for Qwen results (in qwen_results subfolder)
+            qwen_results_dir = l4_dir / "qwen_results"
+            qwen_files = list(qwen_results_dir.glob("evaluation_results_*.json")) if qwen_results_dir.exists() else []
             
-            if gemini_files and openrouter_files:
+            if gemini_files and qwen_files:
                 # Use most recent files
                 gemini_file = max(gemini_files, key=lambda p: p.stat().st_mtime)
-                openrouter_file = max(openrouter_files, key=lambda p: p.stat().st_mtime)
+                qwen_file = max(qwen_files, key=lambda p: p.stat().st_mtime)
                 l4_folders[l4_path] = {
                     'gemini_file': gemini_file,
-                    'openrouter_file': openrouter_file,
+                    'openrouter_file': qwen_file,  # Keep name for compatibility
                     'l4_dir': l4_dir
                 }
     
@@ -519,39 +520,39 @@ def find_l4_folders(data_dir):
 
 
 def analyze_l4_folder(l4_folder, file_info, output_dir):
-    """Run analysis on a single L4 folder, combining Gemini and OpenRouter results."""
+    """Run analysis on a single L4 folder, combining Gemini and Qwen (OpenRouter) results."""
     print(f"\n{'='*80}")
     print(f"Analyzing L4 folder: {l4_folder}")
     print(f"  Gemini file: {file_info['gemini_file'].name}")
-    print(f"  OpenRouter file: {file_info['openrouter_file'].name}")
+    print(f"  Qwen file: {file_info['openrouter_file'].name}")
     print(f"{'='*80}")
     
     # Load results
     gemini_results, gemini_metadata = load_results(file_info['gemini_file'])
-    openrouter_results, openrouter_metadata = load_results(file_info['openrouter_file'])
+    qwen_results, qwen_metadata = load_results(file_info['openrouter_file'])
     
     if not gemini_results:
         print(f"ERROR: No Gemini results loaded from {file_info['gemini_file']}")
         return False
     
-    if not openrouter_results:
-        print(f"ERROR: No OpenRouter results loaded from {file_info['openrouter_file']}")
+    if not qwen_results:
+        print(f"ERROR: No Qwen results loaded from {file_info['openrouter_file']}")
         return False
     
     # Extract data
     gemini_data = extract_gemini_scores_and_flags(gemini_results)
-    openrouter_data = extract_openrouter_scores_and_flags(openrouter_results)
+    qwen_data = extract_openrouter_scores_and_flags(qwen_results)
     
     if not gemini_data['scores']:
         print(f"ERROR: No Gemini scores extracted")
         return False
     
-    if not openrouter_data['scores']:
-        print(f"ERROR: No OpenRouter scores extracted")
+    if not qwen_data['scores']:
+        print(f"ERROR: No Qwen scores extracted")
         return False
     
     # Combine data by prompt_id
-    combined_data = combine_data_by_prompt_id(gemini_data, openrouter_data)
+    combined_data = combine_data_by_prompt_id(gemini_data, qwen_data)
     
     if not combined_data['gemini']['scores'] or not combined_data['qwen3']['scores']:
         print(f"ERROR: No matched scores after combining data")
@@ -564,7 +565,7 @@ def analyze_l4_folder(l4_folder, file_info, output_dir):
     
     # Generate markdown report
     markdown_report = generate_markdown_report(
-        l4_folder, gemini_metadata, openrouter_metadata, 
+        l4_folder, gemini_metadata, qwen_metadata, 
         overall_results, category_results, flag_results
     )
     
@@ -590,17 +591,17 @@ def main():
         print(f"ERROR: Data directory not found: {data_dir}")
         return
     
-    # Find all L4 folders with both Gemini and OpenRouter results
+    # Find all L4 folders with both Gemini and Qwen (OpenRouter) results
     l4_folders = find_l4_folders(data_dir)
     
     if not l4_folders:
-        print("ERROR: No L4 folders found with both Gemini and OpenRouter results")
+        print("ERROR: No L4 folders found with both Gemini and Qwen (OpenRouter) results")
         print("Looking for:")
         print("  - Gemini results in: Data/L2.X/L4.Y/gemini_results/evaluation_results_*.json")
-        print("  - OpenRouter results in: Data/L2.X/L4.Y/evaluation_results_*.json")
+        print("  - Qwen results in: Data/L2.X/L4.Y/qwen_results/evaluation_results_*.json")
         return
     
-    print(f"Found {len(l4_folders)} L4 folder(s) with both Gemini and OpenRouter results")
+    print(f"Found {len(l4_folders)} L4 folder(s) with both Gemini and Qwen (OpenRouter) results")
     
     # Create output directory
     output_dir = project_root / "analysis_reports"
@@ -635,4 +636,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
