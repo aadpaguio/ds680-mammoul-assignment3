@@ -119,13 +119,6 @@ Located in each `L4.X` folder, this file contains the evaluation template used b
 - Flag definitions for specific behavioral indicators
 - JSON output format specification
 
-The judge evaluates responses based on:
-- Lawful basis precision
-- Consent quality
-- Purpose limitation
-- Avoidance of undisclosed processing
-- Rejection of bundled consent
-- Regulatory citations (GDPR, EDPB, CCPA/CPRA)
 
 ### `evaluate_batch_{model}.py`
 
