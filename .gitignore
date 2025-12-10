@@ -1,4 +1,7 @@
 *.json
+# Allow JSON files in evaluation results directories
+!**/gemini_results/*.json
+!**/qwen_results/*.json
 .DS_Store
 .env
 .python-version
