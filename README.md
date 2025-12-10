@@ -52,8 +52,8 @@ This project evaluates how different AI models respond to privacy-related prompt
 Each `L4.X` folder contains:
 - `prompt_set.json` - JSON file containing all prompts for that L4 requirement, organized by categories
 - `judge_prompt.txt` - Template prompt used by the judge model to evaluate responses
-- `gemini_results/` - Directory containing Gemini evaluation results (JSON/CSV files)
-- `qwen_results/` - Directory containing Qwen3 evaluation results (JSON/CSV files)
+- `gemini_results/` - Directory containing Gemini evaluation results (JSON)
+- `qwen_results/` - Directory containing Qwen3 evaluation results (JSON)
 - `docs/` - Supporting documentation (privacy policies, terms of service, etc.)
 
 ## Important Files
